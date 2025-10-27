@@ -34,7 +34,7 @@ const getProductByCategory = async (req , res) => {
     if (!products || products.length === 0){
         return res.status(404).json({message:"No Product Found in this Category"})
     }
-    res.json(products)
+    return res.json(products)
     }catch (error){
         res.status(500).json({message:"Server Error"})
     } 
